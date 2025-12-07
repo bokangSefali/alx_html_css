@@ -295,15 +295,71 @@ nav a:hover {
 }
 
 
-footer {
-        padding: 40px 20px 20px;
+/* ============= FOOTER ============= */
+
+.footer {
+    background-color: #0a1628;   /* dark blue (matches screenshot) */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    position: relative;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    width: 40px;
+    height: auto;
+}
+
+.footer-left span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.footer-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    font-size: 0.9rem;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-right img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.footer-right img:hover {
+    opacity: 0.7;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 40px 20px;
     }
-    
-    .footer-social {
-        gap: 15px;
+
+    .footer-center {
+        position: static;
+        transform: none;
+        opacity: 0.7;
     }
-    
-    .footer-social a {
-        width: 40px;
-        height: 40px;
-    }
+}
