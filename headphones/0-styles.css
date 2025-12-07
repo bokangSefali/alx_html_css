@@ -48,7 +48,7 @@ nav a:hover {
 /* HERO SECTION */
 .hero {
     height: 100vh;
-    background: url("images/headphones_hero_1.jpg") no-repeat center center/cover;
+    background: url("headphones/images/headphones_hero_1") no-repeat center center/cover;
     position: relative;
     display: flex;
     justify-content: center;
