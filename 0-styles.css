@@ -162,3 +162,71 @@ nav a:hover {
     font-size: 14px;
     color: #666;
 }
+
+/* OUR RESULTS SECTION */
+.results-section {
+    position: relative;
+    background: url("headphones-bg.jpg") no-repeat center/cover;
+    padding: 90px 20px;
+    text-align: center;
+    color: white;
+}
+
+.results-section .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 20, 35, 0.85);
+}
+
+.results-content {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.results-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.results-text {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #d7d7d7;
+}
+
+/* RESULTS BOXES */
+.results-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.result-item {
+    text-align: center;
+}
+
+.pentagon {
+    width: 120px;
+    height: 120px;
+    background: #ff5b73;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.result-item p {
+    font-size: 14px;
+    color: #f2f2f2;
+}
