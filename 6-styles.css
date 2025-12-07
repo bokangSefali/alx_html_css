@@ -1,0 +1,116 @@
+/* Results section basics (adjust container/background as needed) */
+.results-section {
+  padding: 70px 20px;
+  background: linear-gradient(180deg, #0b1620 0%, #0f2430 100%); /* optional dark bg */
+  color: #fff;
+  text-align: center;
+}
+
+.results-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.results-content h2 {
+  margin-bottom: 18px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.results-text {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  color: #d0d7dd;
+  line-height: 1.6;
+}
+
+/* Layout for the four items */
+.results-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* Each item (pentagon + caption) */
+.result-item {
+  width: calc(25% - 21px); /* 4 across with gaps; responsive fallback below */
+  min-width: 180px;
+  text-align: center;
+}
+
+/* Pentagon */
+.pentagon {
+  --size: 130px;            /* change this to resize pentagon */
+  --color: #ff5b73;         /* pentagon color */
+  width: var(--size);
+  height: var(--size);
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  /* Clip to pentagon shape */
+  clip-path: polygon(
+    50% 0%,
+    100% 38%,
+    82% 100%,
+    18% 100%,
+    0% 38%
+  );
+  background: linear-gradient(180deg, var(--color), #ef566b);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+  transition: transform .18s ease, box-shadow .18s ease;
+  user-select: none;
+}
+
+/* Value inside pentagon */
+.pentagon .value {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  transform: translateY(-6%); /* small visual shift upwards */
+}
+
+/* Hover effect */
+.pentagon:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 36px rgba(10,10,10,0.45);
+}
+
+/* Caption under pentagon */
+.result-caption {
+  margin: 0;
+  font-size: 14px;
+  color: #f0f3f5;
+  opacity: 0.95;
+  margin-top: 6px;
+}
+
+/* Responsive behaviour */
+@media (max-width: 900px) {
+  .results-boxes {
+    gap: 20px;
+  }
+  .result-item {
+    width: calc(50% - 15px);
+    margin-bottom: 18px;
+  }
+  .pentagon { --size: 110px; }
+  .pentagon .value { font-size: 20px; }
+}
+
+@media (max-width: 520px) {
+  .result-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .pentagon { --size: 92px; }
+  .pentagon .value { font-size: 18px; transform: translateY(-4%); }
+  .results-text { padding: 0 8px; }
+}
