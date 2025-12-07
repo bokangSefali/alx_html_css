@@ -293,3 +293,17 @@ nav a:hover {
 .cta-btn:hover {
     opacity: 0.9;
 }
+
+
+footer {
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-social {
+        gap: 15px;
+    }
+    
+    .footer-social a {
+        width: 40px;
+        height: 40px;
+    }
